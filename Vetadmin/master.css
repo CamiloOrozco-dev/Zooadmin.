@@ -59,30 +59,33 @@ body {
     outline: none ;
     background: transparent;
     height: 40px;
-    color: #fff;
+    color: rgb(243, 239, 239);
     font-size: 16px;
+    
 }
 
 .loginbox input[ type = "submit" ] {
     border: none;
     outline: none;
     height: 40px;
-    background: #f7e4e4;
-    color: rgb(238, 160, 59);
+    background: #5cd636;
+    color: rgb(37, 39, 35);
     font-size: 18px;
     border-radius: 20px;
 }
 .loginbox input[ type = "submit" ]:hover {
     cursor: pointer;
-    background: #fff;
-    color: #000;
+    background: rgb(19, 156, 49);
+    color: rgb(218, 218, 218);
 }
 .loginbox a {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: darkgrey;
+    color: rgb(235, 206, 206);
 }
 .loginbox a:hover {
     color: #fff;
 }
+
+
