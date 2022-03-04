@@ -13,7 +13,7 @@ body {
     background-image: url(/img/loginbar.jpg);
     filter:alpha(opacity=95);
     -moz-opacity:.95;opacity:.95;
-    color: rgb(235, 116, 37);
+    color: rgb(39, 172, 57);
     top: 50%;
     left: 50%;
     position: absolute;
