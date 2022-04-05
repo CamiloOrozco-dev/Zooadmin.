@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--TODO: Terminar responsive-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,8 +90,8 @@
                                 <input type="password" id="password" name="password" required="required" />
                             </div>
                             <div class="form-group">
-                                <label for="password">Confirmar contraseña</label>
-                                <input type="password" id="password" name="password" required="required" />
+                                <label for="confirm_password">Confirmar contraseña</label>
+                                <input type="password" id="confirm_password" name="confirm_password" required="required" />
                             </div>
                             <div class="form-group">
                                 <button type="submit">Registar</button>

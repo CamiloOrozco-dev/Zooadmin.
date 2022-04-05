@@ -33,8 +33,8 @@ CREATE TABLE `registro` (
   `nombre` varchar(30) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `telefono` varchar(25) NOT NULL,
-  `Correo` varchar(40) NOT NULL,
-  `contraseña` varchar(40) NOT NULL
+  `email` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

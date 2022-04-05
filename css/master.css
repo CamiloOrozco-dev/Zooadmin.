@@ -2,6 +2,7 @@ html {
     width: 100%;
     height: 100%;
     }
+    
     body {
     background: linear-gradient(45deg, rgba(245, 130, 212, 0.74) 20%, rgba(168 , 56, 136, 0.4) 100%);
     color: rgba(0, 0, 0, 0.6);
@@ -144,7 +145,7 @@ html {
     }
     .two .form-group button {
     background: #FFFFFF;
-    color: #4285F4;
+    color: #42f49b;
     }
     .form-group .form-remember {
     font-size: 12px;
