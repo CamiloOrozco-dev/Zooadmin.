@@ -82,7 +82,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Correo</label>
-                                <input type="email" id="email" name="email" required="required" />
+                                <input type="text" id="email" name="email" required="required" />
                             </div>
 
                             <div class="form-group">
@@ -90,8 +90,8 @@
                                 <input type="password" id="password" name="password" required="required" />
                             </div>
                             <div class="form-group">
-                                <label for="cpassword">Confirmar contraseña</label>
-                                <input type="password" id="cpassword" name="cpassword" required="required" />
+                                <label for="password">Confirmar contraseña</label>
+                                <input type="password" id="password" name="password" required="required" />
                             </div>
                             <div class="form-group">
                                 <button type="submit">Registar</button>
