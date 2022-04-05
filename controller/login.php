@@ -1,3 +1,11 @@
+<!-- TODO: terminar el regstro con los datos minuto del video 43:24 -->
+<?php 
+require 'conexion.php';
+if (!empty($_POST['DNI'] && !empty ($_POST['rpassword']))) {
+
+    $records = $conn->prepare ('SELECT DNI, tipo_DNI, nombre, apellido, telefono, email, rpassword SELECT FROM registro WHERE email=:email')
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!--TODO: Terminar responsive-->
@@ -37,8 +45,8 @@
                             <input type="text" id="email" name="email" required="required" />
                         </div>
                         <div class="form-group">
-                            <label for="password">contraseña</label>
-                            <input type="password" id="password" name="password" required="required" />
+                            <label for="rpassword">contraseña</label>
+                            <input type="password" id="rpassword" name="rpassword" required="required" />
                         </div>
                         <div class="form-group">
                             <button type="submit">Ingresar</button>
@@ -86,12 +94,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password">contraseña</label>
-                                <input type="password" id="password" name="password" required="required" />
+                                <label for="rpassword">contraseña</label>
+                                <input type="password" id="rpassword" name="rpassword" required="required" />
                             </div>
                             <div class="form-group">
-                                <label for="confirm_password">Confirmar contraseña</label>
-                                <input type="password" id="confirm_password" name="confirm_password" required="required" />
+                                <label for="confirm_rpassword">Confirmar contraseña</label>
+                                <input type="password" id="confirm_rpassword" name="confirm_rpassword" required="required" />
                             </div>
                             <div class="form-group">
                                 <button type="submit">Registar</button>

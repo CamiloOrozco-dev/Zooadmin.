@@ -2,14 +2,14 @@
 require 'conexion.php';
 $message="";
 //TODO: validar campos requeridos
-if (!empty($_POST['DNI']&& !empty($_POST['nombre'] && !empty($_POST['password'])))) {
+if (!empty($_POST['DNI']&& !empty($_POST['nombre'] && !empty($_POST['rpassword'])))) {
 
-    $sql= "INSERT INTO usuario (DNI, nombre, password) VALUES (:DNI, :nombre, :password)";
+    $sql= "INSERT INTO usuario (DNI, nombre, rpassword) VALUES (:DNI, :nombre, :rpassword)";
     $stmt = $conn->prepare ($sql);
     $stmt->bindParam(':DNI',$_POST['DNI']);
     $stmt->bindParam(':nombre',$_POST['nombre']);
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $stmt->bindParam(':password',$password);
+    $rpassword = password_hash($_POST['rpassword'], PASSWORD_BCRYPT);
+    $stmt->bindParam(':rpassword',$rpassword);
   
     if ($stmt->execute()) {
 
