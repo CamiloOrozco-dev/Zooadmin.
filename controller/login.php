@@ -32,6 +32,18 @@ if ($_POST){
 if (!empty($_POST['DNI'] && !empty ($_POST['rpassword']))) {
 
     $records = $conn->prepare ('SELECT DNI, tipo_DNI, nombre, apellido, telefono, email, rpassword SELECT FROM registro WHERE email=:email');
+    $records -> bindParam(':DNI', $_POST['DNI']);
+    $records -> execute();
+    $results = $records -> fetch(PDO::FETCH_ASSOC);
+
+
+    $message = '';
+
+    if (count($results)> 0 && password_verify($_POST['rpassword'], $results['rpassword']))     {
+  $_SESSION['DNI']=$results ['DNI'];
+  header('locationn: /login.php');
+  
+    } else {
 }
 }
 ?>
