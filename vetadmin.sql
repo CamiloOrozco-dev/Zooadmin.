@@ -27,14 +27,14 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `registro`
 --
 
-CREATE TABLE `registro` (
+CREATE TABLE `vetadmin` (
   `DNI` int(30) NOT NULL,
   `tipo_DNI` varchar(20) NOT NULL,
   `nombre` varchar(30) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `telefono` varchar(25) NOT NULL,
   `email` varchar(40) NOT NULL,
-  `password` varchar(40) NOT NULL
+  `rpassword` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `registro` (
 --
 -- Indices de la tabla `registro`
 --
-ALTER TABLE `registro`
+ALTER TABLE `usuario`
   ADD PRIMARY KEY (`DNI`);
 
 --
@@ -54,7 +54,7 @@ ALTER TABLE `registro`
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
-ALTER TABLE `registro`
+ALTER TABLE `usuario`
   MODIFY `DNI` int(30) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

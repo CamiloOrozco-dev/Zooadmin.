@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+require 'login.php';
 $message="";
 //TODO: validar campos requeridos
 if (!empty($_POST['DNI']&& !empty($_POST['nombre'] && !empty($_POST['rpassword'])))) {
