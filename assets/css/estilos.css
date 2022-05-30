@@ -5,6 +5,9 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
+/* .formulario_register span.required {
+    display: none;
+} */
 
 body{
     background-image: url(../images/bg4.jpg);
@@ -174,3 +177,4 @@ main{
         position: relative;
     }
 }
+
