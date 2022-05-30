@@ -28,12 +28,10 @@ function anchoPage() {
     }
 }
 
-function required(field) {
-    $(`#${field}`).toggle()
-}
 
 $('form#form-register').submit(function (evt) {
     evt.preventDefault(); // Previene la redirección del botón
+    var isValid = true
     $('span.field-validator').hide() // Esconde los validatores
 
     // Expresiones regulares para validar campos
@@ -47,49 +45,56 @@ $('form#form-register').submit(function (evt) {
     var confirmPassword = document.getElementById("confirm-password").value.trim();
     if (fullname == "") {
         $('span#validator-fullname').show()
+        isValied = false
     }
-    else{
-        if(!onlyLetters.test(fullname)){
+    else {
+        if (!onlyLetters.test(fullname)) {
             $('span#validator-fullname-only-letters').show()
+            isValied = false
         }
     }
     if (email == "") {
         $('span#validator-email').show()
+        isValied = false
     }
     else {
         if (!regexEmail.test(email)) {
             $('span#validator-email-regex').show()
+            isValied = false
         }
     }
 
     if (username == "") {
         $('span#validator-username').show()
+        isValied = false
     }
     if (password == "") {
         $('span#validator-password').show()
+        isValied = false
     }
-    if(password != "" && confirmPassword != "" && password != confirmPassword){
+    if (password != "" && confirmPassword != "" && password != confirmPassword) {
         $('span#validator-verify-password').show()
+        isValied = false
     }
 
-    var serializedData = $(this).serialize();
-    
-    $.ajax({
-        type: "POST",
-        url: 'controlador/registro.php',
-        data: serializedData,
-        success: function(e) {
-            // e will be whatever you've returned from your login.php script
-    
-            // Perform conditional check on e 
-            if (e === 'success') {
-                // Alert message here
-                alert("You've been logged in!");
-    
-                // Redirect user here as needed
-            }
-        },
-    });
+    if (isValid) {
+
+        var serializedData = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: 'controlador/registro.php',
+            data: serializedData,
+            success: function (e) {
+                $("#fullname").val("");
+                $("#email").val("");
+                $("#username").val("");
+                $("#password").val("");
+                $("#confirm-password").val("");
+                iniciarSesion()
+            },
+        });
+    }
 })
 
 
