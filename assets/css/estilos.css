@@ -5,9 +5,13 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
-/* .formulario_register span.required {
-    display: none;
-} */
+span.required {
+    display: flex;
+    color: red;
+    font-weight: 500;
+    font-size: 0.8rem;
+    justify-content: flex-end;
+}
 
 body{
     background-image: url(../images/bg4.jpg);
