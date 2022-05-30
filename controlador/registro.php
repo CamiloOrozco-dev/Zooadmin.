@@ -1,28 +1,17 @@
 <?php
 
     include 'conexion.php';
-
+    
     $nombre_completo = trim($_POST['nombre_completo']);
     $correo = trim ($_POST['correo']);
     $usuario = trim( $_POST['usuario']);
     $contrasena = trim( $_POST['contrasena']);
-    $verificar = trim ($_POST ['verificar']);
-
+    
+    
     //Encriptamiento de contraseña
     $contrasena = hash('sha512', $contrasena); 
+    echo $nombre_completo . " " . $correo . " " . $usuario . " " . $contrasena;
 
-     if ($nombre_completo == "" ){
-
-     }
-     if ( $correo == "" ){
-
-     }
-     if ( $usuario == "" ){
-
-     }
-     if ( $contrasena == "" ){
-
-     }
 
         
         $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) 
